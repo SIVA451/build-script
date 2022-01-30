@@ -1,7 +1,9 @@
-yum update -y
-yum install -y httpd
-systemctl start httpd.service
-systemctl enable httpd.service
-cd /var/www/html;
-git clone https://github.com/SIVA451/Sample-Build.git;
-systemctl restart httpd.service
+sudo su
+sudo yum update -y
+sudo yum install -y httpd
+sudo systemctl start httpd.service
+sudo systemctl enable httpd.service
+sudo yum install git -y
+sudo cd /var/www/html
+sudo git clone https://github.com/SIVA451/Sample-Build.git
+sudo systemctl restart httpd.service
